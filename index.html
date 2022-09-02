@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ficha</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <!--Pagina 01-->
+    <section id="pagina-1">
+        <header>
+            <h1 id="titulo-pagina">Perfil do Jogador</h1>
+            <nav>
+                <a href="./index.html"><img src="img/perfil.png" class="pagina-navbar" id="botao-perfil"></a>
+                <a href="/paginas/pagina-pericias/index.html"><img src="img/pericias.png" class="pagina-navbar" id="botao-pericias"></a>
+                <a href="./paginas/pagina-mochila/index.html"><img src="img/mochila.png" class="pagina-navbar" id="botao-mochila"></a>
+            </nav>
+        </header>
+        <main id="main-pagina-1">
+            <!--Detalhes Pessoais-->
+            <div id="perfil">
+                <main id="perfil-conteudo">
+                    <h2>Detalhes Pessoais</h2>
+                    <ul type="none">
+                        <li> <label>Nome</label> <br> <input type="text" id="nome"></li>
+                        <li> <label>Ocupacao</label> <br> <input type="text" id="ocupacao"></li>
+                        <li> <label>Idade</label> <br> <input type="text" id="Idade"></li>
+                        <li> <label>Nivel</label> <br> <input type="text" id="Nivel"></li>
+                        <li> <label>Genero</label> <br> <input type="text" id="Genero"></li>
+                    </ul>   
+                </main>
+            </div>
+            <!--Estatisticas-->
+            <section id="estatisticas">
+                <header>
+                    <img src="img/pj-profile.jpg" id="foto-personagem">
+                </header>
+               
+                <label id="vida-label">vida</label>
+                    <div id="barra-de-vida-borda">
+
+                        <div id="barra-de-vida-barra">
+                            <input type="text" maxlength="3" id="vida-atual" value="100">
+                            <span>/</span>
+                            <input type="text" maxlength="3" id="vida-maxima" value="100">
+                        </div>
+
+                    </div>
+                    
+                    <label>CD</label>
+                    <input type="text" id="cd" value="0">
+            </section>
+        </main>
+    </section>
+
+    <script src="main.js"></script>
+
+</body>
+</html>
