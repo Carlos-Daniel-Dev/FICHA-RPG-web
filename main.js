@@ -24,8 +24,11 @@ function getCookie(cname) {
 function carregarInfoPerfil() {
 
   //pegar o que tem no cookie
-  let PersonagemPerfil = getCookie('FichaPerfil')
-  console.log('AQUI' + PersonagemPerfil)
+  try {
+    let PersonagemPerfil = getCookie('FichaPerfil')
+    console.log('AQUI' + PersonagemPerfil)
+  }
+  catch{}
 
   if(PersonagemPerfil != ''){ //So carregar se tiver algo
 
@@ -87,12 +90,8 @@ function salvarInfoPerfil() {
   // PersonagemPerfil['CD'] = CDPersonagem
   
   PersonagemPerfil = JSON.stringify(PersonagemPerfil);
-  console.log(PersonagemPerfil)
-  console.log(typeof(PersonagemPerfil))
-  setCookie('FichaPerfil', PersonagemPerfil, 10)
-  console.log('Salvo com sucesso')
+  setCookie('FichaPerfil', PersonagemPerfil, 360)
   PersonagemPerfil = getCookie('FichaPerfil')
-  console.log(PersonagemPerfil)
 
 }
 

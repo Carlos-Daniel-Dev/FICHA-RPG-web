@@ -24,9 +24,10 @@ function carregarInfoPerfil() {
 
   //pegar o que tem no cookie
   let PersonagemMochila = getCookie('FichaMochila')
-  console.log('AQUI' + PersonagemMochila)
-
-  PersonagemMochila = JSON.parse(PersonagemMochila); //Transformando a string em objeto
+  try{
+    PersonagemMochila = JSON.parse(PersonagemMochila); //Transformando a string em objeto
+  }
+  catch{}
 
     //Pegar o endereço dos inputs
     let Item1 = document.getElementById('item1')
@@ -80,12 +81,8 @@ function salvarInfoMochila() {
     } 
 
     PersonagemMochila = JSON.stringify(PersonagemMochila);
-    console.log(PersonagemMochila)
-    console.log(typeof(PersonagemMochila))
-    setCookie('FichaMochila', PersonagemMochila, 10)
-    console.log('Salvo com sucesso')
+    setCookie('FichaMochila', PersonagemMochila, 360)
     PersonagemMochila = getCookie('FichaMochila')
-    console.log(PersonagemMochila)
   
 }
 

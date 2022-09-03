@@ -24,7 +24,10 @@ function carregarInfoPericias() {
   
       //Pegar o Cookie
     let PersonagemPericias = getCookie('FichaPericia')
-    PersonagemPericias = JSON.parse(PersonagemPericias);
+    try{
+      PersonagemPericias = JSON.parse(PersonagemPericias);
+    }
+    catch{}
 
     //Pegar o endereço dos inputs
     let Eletronica = document.getElementById('eletronica')
@@ -57,9 +60,6 @@ function carregarInfoPericias() {
     Medicina.value = PersonagemPericias.medicina
     Arma.value = PersonagemPericias.arma
     Programar.value = PersonagemPericias.programar
-
-
-    console.log(PersonagemPericias); //Mostrando o conteudo do cookie
   
 }
 
@@ -102,12 +102,8 @@ function salvarInfoPericias() {
   } 
 
       PersonagemPerfil = JSON.stringify(PersonagemPerfil);
-      console.log(PersonagemPerfil)
-      console.log(typeof(PersonagemPerfil))
-      setCookie('FichaPericia', PersonagemPerfil, 10)
-      console.log('Salvo com sucesso')
+      setCookie('FichaPericia', PersonagemPerfil, 360)
       PersonagemPerfil = getCookie('FichaPericia')
-      console.log(PersonagemPerfil)
 
 }
 
