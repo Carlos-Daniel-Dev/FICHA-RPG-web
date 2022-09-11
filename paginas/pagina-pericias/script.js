@@ -24,10 +24,7 @@ function carregarInfoPericias() {
   
       //Pegar o Cookie
     let PersonagemPericias = getCookie('FichaPericia')
-    try{
-      PersonagemPericias = JSON.parse(PersonagemPericias);
-    }
-    catch{}
+    PersonagemPericias = JSON.parse(PersonagemPericias);
 
     //Pegar o endereço dos inputs
     let Eletronica = document.getElementById('eletronica')

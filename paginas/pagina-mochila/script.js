@@ -24,10 +24,7 @@ function carregarInfoPerfil() {
 
   //pegar o que tem no cookie
   let PersonagemMochila = getCookie('FichaMochila')
-  try{
-    PersonagemMochila = JSON.parse(PersonagemMochila); //Transformando a string em objeto
-  }
-  catch{}
+  PersonagemMochila = JSON.parse(PersonagemMochila); //Transformando a string em objeto
 
     //Pegar o endereço dos inputs
     let Item1 = document.getElementById('item1')

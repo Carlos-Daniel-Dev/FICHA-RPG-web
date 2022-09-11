@@ -24,13 +24,10 @@ function getCookie(cname) {
 function carregarInfoPerfil() {
 
   //pegar o que tem no cookie
-  try {
-    let PersonagemPerfil = getCookie('FichaPerfil')
-    console.log('AQUI' + PersonagemPerfil)
-  }
-  catch{}
+  let PersonagemPerfil = getCookie('FichaPerfil')
+  console.log('AQUI' + PersonagemPerfil)
 
-  if(PersonagemPerfil != ''){ //So carregar se tiver algo
+  if (PersonagemPerfil != ''){ //So carregar se tiver algo
 
     PersonagemPerfil = JSON.parse(PersonagemPerfil); //Transformando a string em objeto
 
