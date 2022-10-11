@@ -2,8 +2,7 @@ function carregarInfoPerfil() {
 
   // Pegar informaçoes do localStorage
   let PersonagemPerfil = localStorage.getItem("FichaPerfil")
-
-  if (PersonagemPerfil != ''){ //So carregar se tiver algo
+  if (PersonagemPerfil != null){ //So carregar se tiver algo
 
     PersonagemPerfil = JSON.parse(PersonagemPerfil); //Transformando a string em objeto
 
@@ -17,6 +16,7 @@ function carregarInfoPerfil() {
     let VidaMaximaPersonagem = document.getElementById('vida-maxima')
     let CDPersonagem = document.getElementById('cd')
 
+    
     // Adicionando na tela os valores
     NomePersonagem.value = PersonagemPerfil.nome
     OcupacaoPersonagem.value = PersonagemPerfil.ocupacao
@@ -65,6 +65,7 @@ function salvarInfoPerfil() {
   PersonagemPerfil = JSON.stringify(PersonagemPerfil);
   // setCookie('FichaPerfil', PersonagemPerfil, 360)
   // PersonagemPerfil = getCookie('FichaPerfil')
+  console.log(PersonagemPerfil)
   localStorage.setItem("FichaPerfil", PersonagemPerfil)
 
 }

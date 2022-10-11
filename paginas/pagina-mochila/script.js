@@ -24,30 +24,35 @@ function carregarInfoPerfil() {
 
   //pegar o que tem no cookie
   let PersonagemMochila = localStorage.getItem('FichaMochila')
-  PersonagemMochila = JSON.parse(PersonagemMochila); //Transformando a string em objeto
 
-    //Pegar o endereço dos inputs
-    let Item1 = document.getElementById('item1')
-    let Item2 = document.getElementById('item2')
-    let Item3 = document.getElementById('item3')
-    let Item4 = document.getElementById('item4')
-    let Item5 = document.getElementById('item5')
-    let Item6 = document.getElementById('item6')
-    let Item7 = document.getElementById('item7')
-    let Item8 = document.getElementById('item8')
-
-    //Adicionando na tela os valores
-    Item1 = document.getElementById('item1').value = PersonagemMochila.item1
-    Item2 = document.getElementById('item2').value = PersonagemMochila.item2
-    Item3 = document.getElementById('item3').value = PersonagemMochila.item3
-    Item4 = document.getElementById('item4').value = PersonagemMochila.item4
-    Item5 = document.getElementById('item5').value = PersonagemMochila.item5
-    Item6 = document.getElementById('item6').value = PersonagemMochila.item6
-    Item7 = document.getElementById('item7').value = PersonagemMochila.item7
-    Item8 = document.getElementById('item8').value = PersonagemMochila.item8
+  if(PersonagemMochila != null) {
 
 
-    console.log('carregado com sucesso!')
+    PersonagemMochila = JSON.parse(PersonagemMochila); //Transformando a string em objeto
+
+      //Pegar o endereço dos inputs
+      let Item1 = document.getElementById('item1')
+      let Item2 = document.getElementById('item2')
+      let Item3 = document.getElementById('item3')
+      let Item4 = document.getElementById('item4')
+      let Item5 = document.getElementById('item5')
+      let Item6 = document.getElementById('item6')
+      let Item7 = document.getElementById('item7')
+      let Item8 = document.getElementById('item8')
+
+      //Adicionando na tela os valores
+      Item1 = document.getElementById('item1').value = PersonagemMochila.item1
+      Item2 = document.getElementById('item2').value = PersonagemMochila.item2
+      Item3 = document.getElementById('item3').value = PersonagemMochila.item3
+      Item4 = document.getElementById('item4').value = PersonagemMochila.item4
+      Item5 = document.getElementById('item5').value = PersonagemMochila.item5
+      Item6 = document.getElementById('item6').value = PersonagemMochila.item6
+      Item7 = document.getElementById('item7').value = PersonagemMochila.item7
+      Item8 = document.getElementById('item8').value = PersonagemMochila.item8
+
+      console.log('Carregado com sucesso!')
+
+  }
 
 }
 

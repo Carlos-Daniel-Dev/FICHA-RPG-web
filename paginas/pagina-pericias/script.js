@@ -1,6 +1,10 @@
 function carregarInfoPericias() {
   
-    let PersonagemPericias = localStorage.getItem("FichaPericia")
+  let PersonagemPericias = localStorage.getItem("FichaPericia")
+  
+  if(PersonagemPericias != null) {
+
+
     PersonagemPericias = JSON.parse(PersonagemPericias);
 
     //Pegar o endereço dos inputs
@@ -34,6 +38,7 @@ function carregarInfoPericias() {
     Medicina.value = PersonagemPericias.medicina
     Arma.value = PersonagemPericias.arma
     Programar.value = PersonagemPericias.programar
+  }
   
 }
 
