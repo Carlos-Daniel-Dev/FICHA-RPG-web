@@ -1,31 +1,7 @@
-function setCookie(cname,cvalue,exdays) {
-  const d = new Date()
-  d.setTime(d.getTime() + (exdays*24*60*60*1000))
-  let expires = "expires=" + d.toUTCString()
-  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/"
-}
-
-function getCookie(cname) {
-  let name = cname + "="
-  let decodedCookie = decodeURIComponent(document.cookie)
-  let ca = decodedCookie.split(';')
-  for(let i = 0; i < ca.length; i++) {
-    let c = ca[i]
-    while (c.charAt(0) == ' ') {
-      c = c.substring(1)
-    }
-    if (c.indexOf(name) == 0) {
-      return c.substring(name.length, c.length)
-    }
-  }
-  return "";
-}
-
 function carregarInfoPerfil() {
 
-  //pegar o que tem no cookie
-  let PersonagemPerfil = getCookie('FichaPerfil')
-  console.log('AQUI' + PersonagemPerfil)
+  // Pegar informaçoes do localStorage
+  let PersonagemPerfil = localStorage.getItem("FichaPerfil")
 
   if (PersonagemPerfil != ''){ //So carregar se tiver algo
 
@@ -41,7 +17,7 @@ function carregarInfoPerfil() {
     let VidaMaximaPersonagem = document.getElementById('vida-maxima')
     let CDPersonagem = document.getElementById('cd')
 
-    //Adicionando na tela os valores
+    // Adicionando na tela os valores
     NomePersonagem.value = PersonagemPerfil.nome
     OcupacaoPersonagem.value = PersonagemPerfil.ocupacao
     IdadePersonagem.value = PersonagemPerfil.idade
@@ -87,8 +63,9 @@ function salvarInfoPerfil() {
   // PersonagemPerfil['CD'] = CDPersonagem
   
   PersonagemPerfil = JSON.stringify(PersonagemPerfil);
-  setCookie('FichaPerfil', PersonagemPerfil, 360)
-  PersonagemPerfil = getCookie('FichaPerfil')
+  // setCookie('FichaPerfil', PersonagemPerfil, 360)
+  // PersonagemPerfil = getCookie('FichaPerfil')
+  localStorage.setItem("FichaPerfil", PersonagemPerfil)
 
 }
 

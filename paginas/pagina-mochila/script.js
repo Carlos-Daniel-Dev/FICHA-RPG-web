@@ -23,7 +23,7 @@ function setCookie(cname,cvalue,exdays) {
 function carregarInfoPerfil() {
 
   //pegar o que tem no cookie
-  let PersonagemMochila = getCookie('FichaMochila')
+  let PersonagemMochila = localStorage.getItem('FichaMochila')
   PersonagemMochila = JSON.parse(PersonagemMochila); //Transformando a string em objeto
 
     //Pegar o endereço dos inputs
@@ -78,14 +78,13 @@ function salvarInfoMochila() {
     } 
 
     PersonagemMochila = JSON.stringify(PersonagemMochila);
-    setCookie('FichaMochila', PersonagemMochila, 360)
-    PersonagemMochila = getCookie('FichaMochila')
+    localStorage.setItem('FichaMochila', PersonagemMochila)
   
 }
 
 carregarInfoPerfil()
 
-//Salvar automaticamente
+// Salvar automaticamente
 setInterval(() => {
   salvarInfoMochila()
 }, 500);
