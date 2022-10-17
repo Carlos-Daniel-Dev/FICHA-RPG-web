@@ -1,6 +1,6 @@
 # FICHA VIRTUAL RPG
 
-** Why was it created?
+** Why was it created? **
 
 Project maked to facilitate the rpg sessions of my friends, create a virtual sheet rather than use pdf or paper
 
