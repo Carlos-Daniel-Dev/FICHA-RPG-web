@@ -1,9 +1,11 @@
 # FICHA VIRTUAL RPG
 
-## **Why was it created?**
 
-Project maked to facilitate the rpg sessions of my friends, create a virtual sheet rather than use pdf or paper
+## Informaçoes basicas
+![image](https://user-images.githubusercontent.com/105173667/197408429-8dc98155-5069-4778-b107-30ede5f3f7ce.png)
+## Pericias
+![image](https://user-images.githubusercontent.com/105173667/197408437-d91dcb48-46b4-42be-a084-5f71beae7563.png)
+## Mochila
+![image](https://user-images.githubusercontent.com/105173667/197408440-4a560213-0045-4097-9ab8-821639ad3b4d.png)
 
-This project has maded with only html, css, js.
 
-The informations save in browser using "Local Storage" from javascript.
